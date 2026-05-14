@@ -1,0 +1,11 @@
+﻿services:
+  notifyhub.api:
+    image: notifyhub.api
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    build:
+      context: .
+      dockerfile: src/NotifyHub.API/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
